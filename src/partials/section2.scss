@@ -1,0 +1,41 @@
+/*SECTION 2 FORM*/
+.sec2 {
+  background: $color_formviolet;
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+}
+label:not([for='checkboxtext']) {
+  font-weight: 200;
+}
+input[type='submit'] {
+  font-size: 2rem;
+}
+input[type='submit']:hover {
+  opacity: 0.9;
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec2 {
+    position: absolute;
+    top: 84px;
+    right: 50px;
+    max-width: 270px;
+    h3 {
+      font-size: 1.4rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+  label[for='checkboxtext'] {
+    font-size: 0.6rem;
+  }
+  input[type='submit'] {
+    font-size: 1.5rem;
+  }
+}

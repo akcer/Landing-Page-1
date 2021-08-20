@@ -1,0 +1,80 @@
+/*PREMIUM*/
+.premium {
+  > li {
+    font-weight: 200;
+    position: relative;
+    padding: 1em 0;
+    transition: background-color 0.5s, transform 0.5s;
+    text-align: center;
+    text-transform: uppercase;
+    width: 35%;
+    color: white;
+    &:nth-of-type(odd) {
+      background-color: $color_violetdark;
+    }
+    &:nth-of-type(even) {
+      background-color: $color_violetlight;
+    }
+    &:hover {
+      transform: scale(1.1, 1.1);
+      background: $color_lightgreen;
+      z-index: 2;
+      + ul {
+        display: list-item;
+        list-style-type: none;
+      }
+    }
+  }
+  li:hover .arrow {
+    visibility: visible;
+    border-width: 10px 0 10px 10px;
+  }
+}
+.premium__name ~ span {
+  font-weight: 700;
+}
+@for $i from 1 through 6 {
+  .premium__price-#{$i} {
+    font-size: 34px - $i * 2;
+  }
+}
+.premium__expose {
+  display: none;
+  left: 35%;
+  top: 0;
+  li::before {
+    color: $color_lightgreen;
+    content: "\25AA";
+  }
+}
+.arrow {
+  border-color: transparent transparent transparent $color_lightgreen;
+  border-style: solid;
+  border-width: 0;
+  height: 0;
+  left: 100%;
+  position: absolute;
+  top: calc(50% - 5px);
+  transition: visibility 0.5s, border-width 0.5s;
+  visibility: hidden;
+  width: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .premium {
+    margin-bottom: 200px;
+  }
+  .premium li:hover .arrow {
+    border-width: 10px 10px 0 10px;
+  }
+  .premium__expose {
+    top: 120%;
+    left: 15%;
+    width: 70%;
+  }
+  .arrow {
+    top: 100%;
+    left: calc(50% - 5px);
+    border-color: $color_lightgreen transparent transparent transparent;
+  }
+}

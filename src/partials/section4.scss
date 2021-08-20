@@ -1,0 +1,28 @@
+/*SECTION 4*/
+.sec4 {
+  background: $color_violetlight;
+}
+img[alt="frog"] {
+  height: 350px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec4 {
+    position: relative;
+  }
+  .sec4__text {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-left: 100px !important;
+    height: 550px;
+    h4 {
+      font-size: 1rem;
+    }
+  }
+  img[alt="frog"] {
+    height: 550px;
+  }
+}

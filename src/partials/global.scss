@@ -1,0 +1,28 @@
+/*GLOBAL*/
+body {
+  font-family: 'Roboto', 'sans-serif';
+}
+h3 {
+  font-weight: 900;
+}
+img {
+  margin: 0;
+  width: 100%;
+}
+.checkmark {
+  list-style-type: none;
+}
+.checkmark li {
+  position: relative;
+}
+.checkmark li::before {
+  content: '\2714\0020';
+  left: -20px;
+  position: absolute;
+}
+.text-light-green {
+  color: $color_lightgreen;
+}
+.bg-light-green {
+  background-color: #19c55a;
+}

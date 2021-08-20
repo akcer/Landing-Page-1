@@ -1,0 +1,21 @@
+/*SECTION 1*/
+.sec1 {
+  background: $color_darkblue;
+  padding: 1.5rem;
+  li {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec1 {
+    position: absolute;
+    top: 68px; //68px - header height
+    background: rgba(8, 2, 36, 0.8);
+    padding-left: 100px;
+    padding-bottom: 134px; // img[alt="sky"] height - ( header height + .sec1 content + .sec1 padding-top )
+  }
+  .sec1 li {
+    font-size: 1rem;
+  }
+}

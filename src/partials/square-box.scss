@@ -1,0 +1,14 @@
+/*SQUARE BOX*/
+.square-box {
+  height: 120px;
+  left: 15%;
+  top: 60px;
+  width: 120px;
+}
+@media only screen and (min-width: 1200px) {
+  .square-box {
+    top: 0;
+    left: calc(50% - 60px); //center 120px square-box
+    z-index: 2;
+  }
+}
